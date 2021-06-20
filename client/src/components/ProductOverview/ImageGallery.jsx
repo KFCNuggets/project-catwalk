@@ -94,18 +94,17 @@ const ImageGallery = (props) => {
     <ImageGalleryArea>
       <ThumbnailWrapper>
         {thumbnailUrls.map((thumbnailUrl, index) => (index === thumbnailIndex ? (
-          <Thumbnail key={index} selected src={thumbnailUrl} alt="thumbnail" loading="lazy" onClick={() => handleThumbnailClick(index)} />
+          <Thumbnail key={index} selected src={thumbnailUrl} alt="thumbnail" loading="lazy" width="200" height="200" onClick={() => handleThumbnailClick(index)} />
         ) : (
-          <Thumbnail key={index} src={thumbnailUrl} alt="thumbnail" loading="lazy" onClick={() => handleThumbnailClick(index)} />
+          <Thumbnail key={index} src={thumbnailUrl} alt="thumbnail" loading="lazy" width="200" height="200" onClick={() => handleThumbnailClick(index)} />
         )))}
       </ThumbnailWrapper>
-      <MainImage src={mainImage} alt="main-image" loading="lazy" onClick={handleImageClick} />
+      <MainImage src={mainImage} alt="main-image" loading="lazy" width="200" height="200" onClick={handleImageClick} />
       {expandedView ? (
         <Modal onClick={handleImageClick}>
           <ModalImage src={mainImage} loading="lazy" alt="modal" />
         </Modal>
       ) : null}
-    </ImageGalleryArea>
   );
 };
 

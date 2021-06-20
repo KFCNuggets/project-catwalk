@@ -1,5 +1,5 @@
 /* eslint-disable no-tabs */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import Card from './Card';
