@@ -1,5 +1,6 @@
 const express = require('express');
-const productAPI = require('../../helpers/productsAPI.js');
+const productAPI = require('../../helpers/productsAPI');
+
 const router = express.Router();
 
 // router.get('/:productId', (req, res) => {

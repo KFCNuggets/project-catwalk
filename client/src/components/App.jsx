@@ -28,6 +28,7 @@ class App extends React.Component {
     };
     // initializer();
     this.setRatingAndTotalRev = this.setRatingAndTotalRev.bind(this);
+    this.setProductId = this.setProductId.bind(this);
   }
 
   componentDidMount() {
@@ -55,6 +56,10 @@ class App extends React.Component {
     this.setState({ rating, totalReviews });
   }
 
+  setProductId(productId) {
+    this.setState({ productId });
+  }
+
   render() {
     const {
       productId, product, styles, cart, related, rating, totalReviews,
@@ -74,6 +79,7 @@ class App extends React.Component {
             related={related}
             styles={styles}
             product={product}
+            passBackProductId={this.setProductId}
           />
           <RatingAndReviews
             productId={productId}

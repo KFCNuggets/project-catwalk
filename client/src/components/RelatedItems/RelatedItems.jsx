@@ -23,6 +23,7 @@ class RelatedItems extends React.Component {
       reviews: null,
     };
   }
+  
 
   render() {
     const { related, product } = this.props;

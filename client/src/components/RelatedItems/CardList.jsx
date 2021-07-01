@@ -65,6 +65,12 @@ const CardList = ({ related, product }) => {
   const [styledImage, setStyledImage] = useState([]);
   const [avgRatings, setAvgRatings] = useState([]);
   const [features, setFeatures] = useState([]);
+  const [prodId, setProdId] = useState('');
+
+  const getProdId = (value) => {
+    setProdId(value);
+  };
+
   let imageArray = [];
   let ratingsArray = [];
   let featuresArray = [];
@@ -137,6 +143,7 @@ const CardList = ({ related, product }) => {
   const cardComponents = cards.map((item, index) => (
     <Card
       key={item.id}
+      id={item.id}
       ratings={currentRatings[index]}
       image={currentImages[index]}
       itemName={item.name}
@@ -144,6 +151,7 @@ const CardList = ({ related, product }) => {
       price={item.default_price}
       product={product}
       features={currentFeatures[index]}
+      getProdId={getProdId}
     />
   ));
 
