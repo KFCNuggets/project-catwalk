@@ -222,6 +222,9 @@ const Card = ({
   }
   const compare = () => {
     setCurrentCompare(features);
+  };
+
+  const sendProdId = () => {
     getProdId(id);
   };
 
@@ -236,7 +239,7 @@ const Card = ({
         <Image src={image} alt="empty" onClick={() => { compare(); setShowModal(!showModal); }} />
         <div><Line /></div>
         <Category>{category}</Category>
-        <Name>{itemName}</Name>
+        <Name onClick={sendProdId}>{itemName}</Name>
         <Description>
           $
           {price}
