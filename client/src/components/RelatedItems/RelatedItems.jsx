@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 // import styled, { css } from 'styled-components';
 import CardList from './CardList';
@@ -16,24 +16,62 @@ const Wrapper = styled.div`
   min-width: 80vw;
 `;
 
-class RelatedItems extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      reviews: null,
-    };
-  }
-  
+const RelatedItems = ({ productId, related, product, passBackProductId }) => {
+  const [pID, setPID] = useState(productId);
 
-  render() {
-    const { related, product } = this.props;
-    return (
-      <Wrapper>
-        <CardList related={related} product={product} />
-        {/* <OutfitList /> */}
-      </Wrapper>
-    );
-  }
-}
+  // Child is now holding state
+  const setProdId = (prodId) => {
+    setPID(prodId);
+  };
+
+  // TODO: use passBackProductId to handle state in app.jsx
+  // Currently throws an error
+  // passBackProductId(pID);
+
+  return (
+    <Wrapper>
+      <CardList
+        productId={productId}
+        related={related}
+        product={product}
+        passBackId={setProdId}
+      />
+      {/* <OutfitList /> */}
+    </Wrapper>
+  );
+};
+
+// class RelatedItems extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       productId
+//       reviews: null
+//     };
+//     this.setProdId = this.setProdId.bind(this.setProdId);
+//   }
+
+//   componentDidMount() {
+//     this.setState({ productId: productId });
+//   }
+//   setProdId(prodId) {
+//     this.setState({ prodId });
+//   }
+
+//   render() {
+//     const { related, product, productId} = this.props;
+//     return (
+//       <Wrapper>
+//         <CardList
+//           productId={productId}
+//           related={related}
+//           product={product}
+//           passBackId={this.setProdId}
+//         />
+//         {/* <OutfitList /> */}
+//       </Wrapper>
+//     );
+//   }
+// }
 
 export default RelatedItems;

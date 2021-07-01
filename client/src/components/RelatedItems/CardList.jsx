@@ -60,12 +60,12 @@ const Arrow = styled.div`
 let start = 0;
 let end = 4;
 
-const CardList = ({ related, product, passBackProductId }) => {
+const CardList = ({ productId, related, product, passBackId }) => {
   const [cards, setCards] = useState(related.slice(0, 4));
   const [styledImage, setStyledImage] = useState([]);
   const [avgRatings, setAvgRatings] = useState([]);
   const [features, setFeatures] = useState([]);
-  const [prodId, setProdId] = useState('');
+  const [prodId, setProdId] = useState(productId);
 
   let imageArray = [];
   let ratingsArray = [];
@@ -128,6 +128,8 @@ const CardList = ({ related, product, passBackProductId }) => {
   const getProdId = (value) => {
     setProdId(value);
   };
+
+  passBackId(prodId);
 
   let leftArrow = (<Arrow className="left" onClick={moveLeft} />);
   let rightArrow = (<Arrow className="right" onClick={moveRight} />);

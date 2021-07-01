@@ -48,7 +48,7 @@ class App extends React.Component {
         });
       })
       .catch((err) => {
-        console.log('Error: error getting API data');
+        console.log('Error: error getting API data', err);
       });
   }
 
@@ -76,6 +76,7 @@ class App extends React.Component {
             totalReviews={totalReviews}
           />
           <RelatedItems
+            productId={productId}
             related={related}
             styles={styles}
             product={product}
