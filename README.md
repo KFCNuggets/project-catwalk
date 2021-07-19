@@ -40,9 +40,13 @@ npm start
 npm run react-dev
 ```
 ## Overview
+#### Image Gallery
 ![Image Gallery](https://media.giphy.com/media/cTfinp0CcK5dMvWk05/giphy.gif)
+#### Style Selector
 ![Style Selector](https://media.giphy.com/media/o7hIkwo2ethgDPMLgB/giphy.gif)
+#### Related Items
 ![Related Items](https://media.giphy.com/media/TJOxGmWQKwZV18rPK3/giphy.gif)
+#### Reveiws
 ![Reviews](https://media.giphy.com/media/QLCGHnzVbH20tGTTXF/giphy.gif)
 
 
