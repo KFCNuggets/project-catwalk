@@ -1,22 +1,27 @@
 # Project Catwalk
 
-Front End Capstone done in Hack Reactor
-
 ## Description
 
-(To be added later)
+Project overview page that enables users to review and compare different products that they are interested in. Users will also be able to view comments, questions, and answers that are related to the current product being viewed.
+
+## Table of Contents
+
+<!--ts-->
+* [Dependencies](#Dependencies)
+* [Installing](#Installing)
+* [Executing Program](#Executing-Program)
+* [Overview](#Overview)
+* [Authors](#Authors)
+<!--te-->
 
 ## Getting Started
 
 ### Dependencies
 
-* express
-* mongoose
-* path
-* react
-* react-dom
-* babel
-* webpack
+* Mongoose
+* Express
+* React
+* Node
 
 ### Installing
 
@@ -29,18 +34,21 @@ Front End Capstone done in Hack Reactor
 npm install
 ```
 
-* Running webpack
+* Running Express server and web-pack
 ```
+npm start
 npm run react-dev
 ```
+## Overview
+[!Image Gallery](https://media.giphy.com/media/cTfinp0CcK5dMvWk05/giphy.gif)
+[!Style Selector](https://media.giphy.com/media/o7hIkwo2ethgDPMLgB/giphy.gif)
+[!Related Items](https://media.giphy.com/media/TJOxGmWQKwZV18rPK3/giphy.gif)
+[!Reviews](https://media.giphy.com/media/QLCGHnzVbH20tGTTXF/giphy.gif)
 
-## Help
-
-(To be added later)
 
 ## Authors
 
-Contributors names and contact info
+Contributors names
 * Kate Jeon
 * Steven Lam
 * Chhuong Le
