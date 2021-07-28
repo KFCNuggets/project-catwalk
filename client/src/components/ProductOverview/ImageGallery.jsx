@@ -35,10 +35,10 @@ const Thumbnail = styled.img`
 `;
 
 const MainImage = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: scale-down;
-  align-self: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-self: stretch;
   cursor: pointer;
   overflow: hidden;
   &:hover {
