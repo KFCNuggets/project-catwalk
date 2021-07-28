@@ -157,7 +157,7 @@ const Tile = (props) => {
   let modalImage;
   let recommended;
 
-  const showImages = (photo) => <img className="photo thumbnail" key={photo.id} alt={photo.id} src={photo.url} />;
+  const showImages = (photo) => <img className="photo thumbnail" key={photo.id} loading="lazy" alt={photo.id} src={photo.url} />;
 
   if (body.length > 250) {
     if (expand) {
@@ -183,7 +183,7 @@ const Tile = (props) => {
   if (showModal) {
     modalImage = (
       <Modal onClick={() => { setShowModal(!showModal); }}>
-        <img alt="modal" className="modal-content" src={clickedImage} />
+        <img alt="modal" loading="lazy" className="modal-content" src={clickedImage} />
       </Modal>
     );
   }

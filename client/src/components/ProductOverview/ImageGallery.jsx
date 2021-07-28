@@ -7,8 +7,8 @@ const ImageGalleryArea = styled.div`
   grid-area: ImageGallery;
   display: flex;
   align-items: flex-start;
-  max-height: 70vh;
   overflow: hidden;
+  height: 100%;
 `;
 
 // //////////////// STYLED COMPONENTS //////////////// //
@@ -96,18 +96,17 @@ const ImageGallery = (props) => {
     <ImageGalleryArea>
       <ThumbnailWrapper>
         {thumbnailUrls.map((thumbnailUrl, index) => (index === thumbnailIndex ? (
-          <Thumbnail key={index} selected src={thumbnailUrl} alt="thumbnail" onClick={() => handleThumbnailClick(index)} />
+          <Thumbnail key={index} selected src={thumbnailUrl} alt="thumbnail" loading="lazy" width="200" height="200" onClick={() => handleThumbnailClick(index)} />
         ) : (
-          <Thumbnail key={index} src={thumbnailUrl} alt="thumbnail" onClick={() => handleThumbnailClick(index)} />
+          <Thumbnail key={index} src={thumbnailUrl} alt="thumbnail" loading="lazy" width="200" height="200" onClick={() => handleThumbnailClick(index)} />
         )))}
       </ThumbnailWrapper>
-      <MainImage src={mainImage} alt="main-image" onClick={handleImageClick} />
+      <MainImage src={mainImage} alt="main-image" loading="lazy" width="200" height="200" onClick={handleImageClick} />
       {expandedView ? (
         <Modal onClick={handleImageClick}>
-          <ModalImage src={mainImage} alt="modal" />
+          <ModalImage src={mainImage} loading="lazy" alt="modal" />
         </Modal>
       ) : null}
-    </ImageGalleryArea>
   );
 };
 

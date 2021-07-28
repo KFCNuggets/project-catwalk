@@ -236,7 +236,7 @@ const Card = ({
         <H.Wrapper>
           {hearts}
         </H.Wrapper>
-        <Image src={image} alt="empty" onClick={() => { compare(); setShowModal(!showModal); }} />
+        <Image src={image} alt="empty" loading="lazy" width="200" height="200" onClick={() => { compare(); setShowModal(!showModal); }} />
         <div><Line /></div>
         <Category>{category}</Category>
         <Name onClick={sendProdId}>{itemName}</Name>

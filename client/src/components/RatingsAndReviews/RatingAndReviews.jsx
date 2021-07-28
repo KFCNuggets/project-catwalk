@@ -16,7 +16,7 @@ const StyledDiv = styled.div`
   grid-template-columns: minmax(0px, 1fr) minmax(0px, 3fr);
   grid-template-rows: auto auto minmax(0px, 1fr) auto;
   min-height: 80vh;
-  min-width: 80vw;
+  max-width: 80vw;
   gap: 1em;
   padding: 2rem;
   margin: auto;

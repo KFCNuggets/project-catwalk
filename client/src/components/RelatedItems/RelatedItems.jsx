@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 // import styled, { css } from 'styled-components';
 import CardList from './CardList';
-import OutfitList from './OutfitList';
 
 // TO DO:
 // App passed down related item
