@@ -2,7 +2,7 @@
 
 ## Description
 
-Project overview page that enables users to review and compare different products that they are interested in. Users will also be able to view comments, questions, and answers that are related to the current product being viewed.
+Fashion retailer product overview page that enables users to review and compare different products that they are interested in. Users will also be able to view comments, questions, and answers that are related to the current product being viewed.
 
 ## Table of Contents
 
