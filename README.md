@@ -46,7 +46,7 @@ npm run react-dev
 ![Style Selector](https://media.giphy.com/media/o7hIkwo2ethgDPMLgB/giphy.gif)
 #### Related Items
 ![Related Items](https://media.giphy.com/media/TJOxGmWQKwZV18rPK3/giphy.gif)
-#### Reveiws
+#### Reviews
 ![Reviews](https://media.giphy.com/media/QLCGHnzVbH20tGTTXF/giphy.gif)
 
 
